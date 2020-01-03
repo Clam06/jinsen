@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>录入职级信息</title>
+<title>录入职级信息333333333333333333333</title>
     <link rel="stylesheet" href="js/bstable/css/bootstrap.min.css">
     <link rel="stylesheet" href="js/bstable/css/bootstrap-table.css">
     <link rel="stylesheet" href="css/all.css">
