@@ -53,7 +53,7 @@
             exportDataType:'all',//'basic':当前页的数据, 'all':全部的数据, 'selected':选中的数据    
             showExport: true,  //是否显示导出按钮    
             buttonsAlign:"right",  //按钮位置    
-            exportTypes:['excel','xlsx','csv'],  //导出文件类型，[ 'csv', 'txt', 'sql', 'doc', 'excel', 'xlsx', 'pdf']
+            exportTypes:['excel','xlsx','csv','pdf'],  //导出文件类型，[ 'csv', 'txt', 'sql', 'doc', 'excel', 'xlsx', 'pdf']
             exportOptions:{
                 // ignoreColumn: [0,1],  //忽略某一列的索引
                 fileName: "金森公司结算签收单",  //文件名称设置
@@ -70,7 +70,16 @@
                 return temp;
             },
             columns: [
-                {
+            	[
+            		{
+                        "title": "金森公司结算签收单",
+                        "font-size":"100px",
+                        "halign":"center",
+                        "align":"center",
+                        "colspan": 9
+                    }
+            	],
+                [{
                     title: "年",
                     field: '',
                     formatter:function(value,row,index){
@@ -131,6 +140,7 @@
                     
                }
             ]
+            	]
         });
     }
     </script>
@@ -170,7 +180,16 @@
                 return temp;
             },
             columns: [
-                {
+            	[
+                    {
+                        "title": "金森木材销售结算登记表",
+                        "font-size":"100px",
+                        "halign":"center",
+                        "align":"center",
+                        "colspan": 14
+                    }
+                ],
+                [{
                     title: "采伐证号",
                     field: 'cutNum',
                     align: 'center',
@@ -246,6 +265,7 @@
                         valign: 'middle'
                         
                    }
+                    ]
             ]
         });
     }
@@ -288,7 +308,17 @@
                 return temp;
             },
             columns: [
-            	{
+            	[
+                    {
+                        "title": "金森木材1-12月销售情况表",
+                        "font-size": "24px",
+                        "halign":"center",
+                        "align":"center",
+                        "valign": "middle",
+                        "colspan": 5
+                    }
+                ],
+            	[{
                     title: "年",
                     field: '',
                     formatter:function(value,row,index){
@@ -321,7 +351,7 @@
                     align: 'center',
                     valign: 'middle'
                 }
-                
+                ]
             ]
         });
     }
@@ -362,7 +392,17 @@
                 return temp;
             },
             columns: [
-                {
+            	[
+                    {
+                        "title": "福建金森林业木材生产工资结算登记表",
+                        "font-size":"100px",
+                        "halign":"center",
+                        "align":"center",
+                        "valign": "middle",
+                        "colspan": 10
+                    }
+                ],
+                [{
                     title: "采伐证号",
                     field: 'cutNum',
                     align: 'center',
@@ -427,6 +467,7 @@
                         
                    }
             ]
+            	]
         });
     }
     </script>
@@ -467,7 +508,17 @@
                 return temp;
             },
             columns: [
-            	{
+            	[
+                    {
+                        "title": "金森公司月销售情况表",
+                        "font-size":"100px",
+                        "halign":"center",
+                        "align":"center",
+                        "valign": "middle",
+                        "colspan": 10
+                    }
+                ],
+            	[{
                     title: "采伐证号",
                     field: 'cutNum',
                     align: 'center',
@@ -528,6 +579,7 @@
                      valign: 'middle'
                      
                 }
+                 ]
             ]
         });
     }
@@ -733,5 +785,8 @@
 <script src="js/bootstrap-table-export.js"></script>
 <script src="js/tableExport.js"></script>
 <script src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="/static/js/xlsx.full.min.js"></script>
+<script src="https://unpkg.com/tableexport.jquery.plugin/libs/jsPDF/jspdf.min.js"></script>
+<script src="https://unpkg.com/tableexport.jquery.plugin/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
 </body>
 </html>
